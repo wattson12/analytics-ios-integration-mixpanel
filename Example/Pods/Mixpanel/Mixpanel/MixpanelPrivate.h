@@ -14,7 +14,6 @@
 #endif
 
 #if !MIXPANEL_LIMITED_SUPPORT
-#import <CommonCrypto/CommonDigest.h>
 
 #if TARGET_OS_IPHONE
 #import <CoreTelephony/CTCarrier.h>
@@ -46,7 +45,7 @@
 #endif
 {
     NSUInteger _flushInterval;
-    BOOL _enableABTestDesigner;
+    BOOL _enableVisualABTestAndCodeless;
 }
 
 #if !MIXPANEL_LIMITED_SUPPORT
@@ -87,7 +86,6 @@
 @property (nonatomic, strong) NSSet *variants;
 @property (nonatomic, strong) NSSet *eventBindings;
 
-@property (atomic, copy) NSString *decideURL;
 @property (atomic, copy) NSString *switchboardURL;
 
 + (void)assertPropertyTypes:(NSDictionary *)properties;
