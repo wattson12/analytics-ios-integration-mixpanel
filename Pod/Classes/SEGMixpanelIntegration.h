@@ -12,4 +12,7 @@
 
 - (instancetype)initWithSettings:(NSDictionary *)settings andMixpanel:(Mixpanel *)mixpanel;
 
+- (NSString *)mixpanelDistinctId;
+- (void)reset;
+
 @end

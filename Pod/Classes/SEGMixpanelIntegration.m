@@ -246,4 +246,9 @@
     SEGLog(@"[[Mixpanel sharedInstance] flush]");
 }
 
+- (NSString *)mixpanelDistinctId
+{
+    return self.mixpanel.distinctId;
+}
+
 @end
